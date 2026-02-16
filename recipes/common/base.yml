@@ -7,6 +7,7 @@ modules:
       ID: blue_build
       ID_LIKE: fedora
       NAME: BlueBuild
+      PRETTY_NAME: BlueBuild Kinoite
 
   - type: files
     files:

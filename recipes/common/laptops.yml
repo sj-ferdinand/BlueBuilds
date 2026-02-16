@@ -20,7 +20,7 @@ modules:
           - org.libretro.RetroArch
 
         # security
-          - io.ente.Auth
+          - io.ente.auth
 
         # utils
           - com.oppzippy.OpenSCQ30
