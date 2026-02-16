@@ -2,8 +2,18 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
 modules:
+  - type: os-release
+    properties:
+      ID: blue_build
+      ID_LIKE: fedora
+      NAME: BlueBuild
+      PRETTY_NAME:
+
   - type: files
     files:
+      - source: plymouth-themes
+        destination: /usr/share/plymouth-themes
+
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
@@ -40,24 +50,46 @@ modules:
         - tailscale
 
         # codecs
-        - ffmpeg
-        - ffmpeg-libs
-        - libva
-        - libva-utils
-        - mesa-dri-drivers
-        - mesa-vulkan-drivers
-        - vulkan-loader
-        - mesa-libGLU
-        - gstreamer1-plugins-{bad-\*,good-\*,base}
+        - gstreamer1-plugin-dav1d
+        - gstreamer1-plugin-libav
         - gstreamer1-plugin-openh264
-        - gstreamer1-libav
-        - lame\*
+        - gstreamer1-plugins-bad-free
+        - gstreamer1-plugins-bad-free-extras
+        - gstreamer1-plugins-bad-free-fluidsynth
+        - gstreamer1-plugins-bad-free-libs
+        - gstreamer1-plugins-bad-free-lv2
+        - gstreamer1-plugins-bad-free-opencv
+        - gstreamer1-plugins-bad-free-wildmidi
+        - gstreamer1-plugins-bad-free-zbar
+        - gstreamer1-plugins-bad-freeworld
+        - gstreamer1-plugins-base
+        - gstreamer1-plugins-good
+        - gstreamer1-plugins-good-extras
+        - gstreamer1-plugins-good-gtk
+        - gstreamer1-plugins-good-qt
+        - gstreamer1-plugins-good-qt6
+        - gstreamer1-plugins-ugly-free
+        - lame
+        - lame-libs
+
+    replace:
+      - from-repo: rpmfusion-free
+        packages:
+          - ffmpeg
+          - ffmpeg-libs
+          - libva
+          - libva-utils
+          - mesa-dri-drivers
+          - mesa-vulkan-drivers
+          - vulkan-loader
+          - mesa-libGLU
+
 
     remove:
+      auto-remove: true
       packages:
         # example: removing firefox (in favor of the flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - gstreamer1-plugins-bad-free-devel
         - ffmpeg-free
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
