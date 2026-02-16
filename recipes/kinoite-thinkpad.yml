@@ -27,6 +27,7 @@ modules:
       #   -
       copr:
         - sneexy/python-validity
+          chroot: fedora-%OS_VERSION%-x86_64
 
     install:
       packages:
