@@ -51,7 +51,7 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          - org.libreoffice.Libreoffice
+          - org.libreoffice.LibreOffice
           - app.zen_browser.zen
           - org.videolan.VLC
           - com.valvesoftware.Steam
