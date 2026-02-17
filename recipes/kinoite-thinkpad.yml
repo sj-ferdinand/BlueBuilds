@@ -29,7 +29,3 @@ modules:
       packages:
         - intel-media-driver
 
-  - type: script
-    scripts:
-      - setup-hibernation.sh
-
