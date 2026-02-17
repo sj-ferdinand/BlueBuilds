@@ -29,3 +29,7 @@ modules:
       packages:
         - intel-media-driver
 
+    remove:
+      packages:
+        - fprintd
+
