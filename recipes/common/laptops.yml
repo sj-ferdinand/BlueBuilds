@@ -24,7 +24,7 @@ modules:
           - io.ente.auth
 
         # misc useful/fun
-          - io.github.kryptolix.poliedros
+          - io.github.kriptolix.Poliedros
           - com.github.cassidyjames.dippi
           - com.oppzippy.OpenSCQ30
 
