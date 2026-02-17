@@ -27,8 +27,9 @@ modules:
 
     install:
       packages:
-        - open-fprintd
-        - python3-validity
         - intel-media-driver
 
+  - type: script
+    scripts:
+      - setup-hibernation.sh
 
