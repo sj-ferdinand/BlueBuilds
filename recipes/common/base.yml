@@ -4,16 +4,18 @@
 modules:
   - type: os-release
     properties:
-      NAME: BlueBuild
-      PRETTY_NAME: BlueBuild Kinoite
+      NAME: Fedora Linux
+      PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
 
   - type: files
     files:
-      - source: plymouth-themes
-        destination: /usr/share/plymouth-themes
 
-      - source: system
+      - source: base-root
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: script
+    scripts:
+      - base-add-fstab-extras.sh
 
   - type: dnf
     repos:
@@ -41,11 +43,19 @@ modules:
         - syncthingplasmoid-qt6
 
         # filesystem and backup
+        - btrfsmaintenance
+        - btrfs-progs
         - btrfs-assistant
         - btrbk
+        - trash-cli
 
         # network
         - tailscale
+        - cockpit
+        - cockpit-networkmanager
+        - cockpit-ostree
+        - cockpit-files
+        - cockpit-storaged
 
         # codecs
         - gstreamer1-plugin-dav1d
@@ -111,6 +121,7 @@ modules:
           - org.kde.gwenview
 
         # office
+          - org.kde.kate
           - org.libreoffice.LibreOffice
           - md.obsidian.Obsidian
           - org.kde.okular

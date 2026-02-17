@@ -15,28 +15,7 @@ modules:
   - from-file: common/base.yml
   - from-file: common/va-intel.yml
 
-  - type: os-release
-    properties:
-      DEFAULT_HOSTNAME: gutron
-
   - type: files
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
-  - type: dnf
-    install:
-      packages:
-      # fs utils
-        - ncdu
-        - hd-idle
-        - fatrace
-
-      # docker
-        - docker-compose
-
-      # NAS
-        - samba
-
-      # automations
-        - yt-dlp

@@ -1,0 +1,9 @@
+
+# commonly used external USB drives
+
+UUID=77db8d02-85cb-405c-85d2-d2826b0dc72d   /media/TOSHIBA                     btrfs   subvolid=5,nofail,compress=zstd:3,user,noauto                 0 0
+UUID=77db8d02-85cb-405c-85d2-d2826b0dc72d   /media/TOSHIBA/trainBook14-btrbk   btrfs   subvol=trainBook14-btrbk,nofail,compress=zstd:3,user,noauto   0 0
+
+UUID=2415-B072                              /media/ARC64                       exfat   nofail,umask=0000,uid=0000,gid=0000,user,noauto               0 0
+
+UUID=05320526-064d-4cf0-b651-30c1bc8cb132   /media/KIOXIA                      btrfs   noauto,nofail,compress=zstd:3,user,exec                       0 0

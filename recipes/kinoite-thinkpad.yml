@@ -16,6 +16,10 @@ modules:
   - from-file: common/laptops.yml
   - from-file: common/va-intel.yml
 
+  - type: os-release
+    properties:
+      DEFAULT_HOSTNAME: x1carbon
+
   - type: files
     files:
       - source: system

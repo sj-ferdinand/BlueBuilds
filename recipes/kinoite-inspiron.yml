@@ -16,6 +16,10 @@ modules:
   - from-file: common/laptops.yml
   - from-file: common/va-amd.yml
 
+  - type: os-release
+    properties:
+      DEFAULT_HOSTNAME: inspiron5415
+
   - type: files
     files:
       - source: system

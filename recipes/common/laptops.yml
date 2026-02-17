@@ -23,10 +23,20 @@ modules:
           - io.ente.auth
 
         # utils
+          - org.kde.kcalc
+          - org.kde.kamoso
+          - org.kde.qrca
           - com.oppzippy.OpenSCQ30
+
+        # code
+          - com.vscodium.codium
 
         # office
           - org.mozilla.Thunderbird
+
+        # media
+          - org.kde.dragonplayer
+          - org.kde.elisa
 
         # making
           # 3D
@@ -41,6 +51,9 @@ modules:
 
           # video
           - org.kde.subtitlecomposer
+
+          # audio
+          - org.audacityteam.Audacity
 
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
