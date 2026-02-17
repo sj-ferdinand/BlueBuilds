@@ -3,6 +3,13 @@
 
 modules:
 
+  - type: dnf
+    install:
+      packages:
+        - gutenprint-cups
+        - epson-inkjet-printer-escpr-1.8.6-1.x86_64.rpm
+        - epson-printer-utility-1.2.2-1.x86_64.rpm
+
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
@@ -18,11 +25,20 @@ modules:
         # security
           - io.ente.auth
 
-        # utils
+        # misc useful/fun
+          - io.github.kryptolix.poliedros
+          - com.github.cassidyjames.dippi
+          - com.oppzippy.OpenSCQ30
+
+        # kde utils
+          - org.kde.kcolorchooser
           - org.kde.kcalc
           - org.kde.kamoso
           - org.kde.qrca
-          - com.oppzippy.OpenSCQ30
+
+        # printing
+          - net.epson.epsonscan2
+          - org.kde.skanpage
 
         # code
           - com.vscodium.codium
@@ -44,6 +60,7 @@ modules:
           - org.kde.krita
           - org.gimp.GIMP
           - com.rawtherapee.RawTherapee
+          - org.kde.kolourpaint
 
           # video
           - org.kde.subtitlecomposer

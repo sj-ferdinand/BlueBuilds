@@ -22,8 +22,6 @@ modules:
 
   - type: dnf
     repos:
-      # files:
-      #   -
       copr:
         - sneexy/python-validity
 

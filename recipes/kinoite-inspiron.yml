@@ -19,3 +19,10 @@ modules:
   - type: os-release
     properties:
       DEFAULT_HOSTNAME: inspiron5415
+
+  - type: default-flatpaks
+    configurations:
+      - notify: true
+        scope: system
+        install:
+          - io.github.pwr_solaar.solaar

@@ -13,10 +13,6 @@ modules:
       - source: base-root
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: script
-    scripts:
-      - base-add-fstab-extras.sh
-
   - type: dnf
     repos:
       nonfree: rpmfusion
@@ -35,21 +31,21 @@ modules:
         - git
         - klassy
 
-        # sync
+      # sync
         - syncthing
         - syncthingctl-qt6
         - syncthingfileitemaction-qt6
         - syncthingtray-qt6
         - syncthingplasmoid-qt6
 
-        # filesystem and backup
+      # filesystem and backup
         - btrfsmaintenance
         - btrfs-progs
         - btrfs-assistant
         - btrbk
         - trash-cli
 
-        # network
+      # network
         - tailscale
         - cockpit
         - cockpit-networkmanager
@@ -57,7 +53,7 @@ modules:
         - cockpit-files
         - cockpit-storaged
 
-        # codecs
+      # codecs
         - gstreamer1-plugin-dav1d
         - gstreamer1-plugin-libav
         - gstreamer1-plugin-openh264
@@ -79,6 +75,12 @@ modules:
         - gstreamer1-plugins-ugly-free
         - lame
         - lame-libs
+
+      # build packagekit-bootc
+        - PackageKit-devel
+        - meson
+        - ninja-build
+        - glib2-devel
 
     replace:
       - from-repo: rpmfusion-free
@@ -130,5 +132,10 @@ modules:
           - org.mozilla.firefox
 
       - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: script
+    scripts:
+      - base-add-fstab-extras.sh
+      - base-build-packagekit-bootc.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
