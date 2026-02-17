@@ -7,3 +7,8 @@ set -oue pipefail
 
 # Your code goes here.
 cat ./resources/base-fstab >> /etc/fstab
+
+cat ./resources/base-fstab
+echo ====\n
+cat /etc/fstab
+echo ====\n
