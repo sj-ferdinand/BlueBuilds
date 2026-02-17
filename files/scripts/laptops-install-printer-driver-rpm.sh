@@ -6,4 +6,5 @@
 set -oue pipefail
 
 # Your code goes here.
-cat ./resources/base-fstab >> /etc/fstab
+sudo rpm -i --nodigest ./resources/epson/*
+

@@ -7,8 +7,6 @@ modules:
     install:
       packages:
         - gutenprint-cups
-        - epson-inkjet-printer-escpr-1.8.6-1.x86_64.rpm
-        - epson-printer-utility-1.2.2-1.x86_64.rpm
 
   - type: default-flatpaks
     configurations:
@@ -68,5 +66,8 @@ modules:
           # audio
           - org.audacityteam.Audacity
 
+    - type: script
+      scripts:
+        - laptops-install-printer-driver-rpm.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
