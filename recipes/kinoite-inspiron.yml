@@ -22,7 +22,7 @@ modules:
 
   - type: default-flatpaks
     configurations:
-      - notify: true
+      - notify: false
         scope: system
         install:
           - io.github.pwr_solaar.solaar
