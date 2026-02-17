@@ -6,6 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
+      BUILD_ID: 2026-02-17.3e
 
   - type: files
     files:

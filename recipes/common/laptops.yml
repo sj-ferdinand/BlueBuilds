@@ -7,6 +7,8 @@ modules:
     install:
       packages:
         - gutenprint-cups
+        - wine
+        - winetricks
 
   - type: default-flatpaks
     configurations:
@@ -14,9 +16,6 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-
-        # compat
-          - org.winehq.Wine/x86_64/wow64-25.08
 
         # games
           - com.valvesoftware.Steam
