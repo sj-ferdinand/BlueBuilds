@@ -66,8 +66,8 @@ modules:
           # audio
           - org.audacityteam.Audacity
 
-    - type: script
-      scripts:
-        - laptops-install-printer-driver-rpm.sh
+  - type: script
+    scripts:
+      - laptops-install-printer-driver-rpm.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
