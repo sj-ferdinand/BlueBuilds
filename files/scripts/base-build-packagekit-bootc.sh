@@ -8,6 +8,7 @@ set -oue pipefail
 # Your code goes here.
 git clone https://github.com/FyraLabs/PackageKit-bootc.git
 cd PackageKit-bootc
+git submodule update --init --recursive
 meson setup builddir
 meson compile -C builddir
 
