@@ -19,8 +19,3 @@ modules:
   - type: os-release
     properties:
       DEFAULT_HOSTNAME: inspiron5415
-
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
