@@ -6,7 +6,6 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: 4a
 
   - type: files
     files:
@@ -102,7 +101,6 @@ modules:
       packages:
         # example: removing firefox (in favor of the flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - pipewire-config-raop
         - ffmpeg-free
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
