@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '5a'
+      BUILD_ID: '5b'
 
   - type: files
     files:
@@ -145,8 +145,8 @@ modules:
 
       - scope: user # Also add Flathub user repo, but no user packages
 
-  - type: script
-    scripts:
+  # - type: script
+    # scripts:
       # - base-add-fstab-extras.sh
       # - base-build-packagekit-bootc.sh
 
