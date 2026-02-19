@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '5c'
+      BUILD_ID: '5d'
 
   - type: files
     files:
@@ -29,17 +29,17 @@ modules:
       packages:
         - gcc
         - python
-        - python-launcher
-        - python3-pip
+        #- python-launcher
+        #- python3-pip
         - fish
         - git
-        - monitor-edid
+        #- monitor-edid
         
       # kde additions
         - klassy
-        - kcron
-        - sddm-kcm
-        - plymouth-kcm
+        #- kcron
+        #- sddm-kcm
+        #- plymouth-kcm
 
       # sync
         - syncthing
