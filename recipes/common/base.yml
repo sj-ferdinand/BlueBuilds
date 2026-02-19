@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '5d'
+      BUILD_ID: '5e'
 
   - type: files
     files:
@@ -149,5 +149,6 @@ modules:
     # scripts:
       # - base-add-fstab-extras.sh
       # - base-build-packagekit-bootc.sh
+  - type: initramfs
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
