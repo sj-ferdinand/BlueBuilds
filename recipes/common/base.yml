@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: 4a
+      BUILD_ID: 5
 
   - type: files
     files:
@@ -29,9 +29,17 @@ modules:
       packages:
         - gcc
         - python
+        - python-launcher
+        - python3-pip
         - fish
         - git
+        - monitor-edid
+        
+      # kde additions
         - klassy
+        - kcron
+        - sddm-kcm
+        - plymouth-kcm
 
       # sync
         - syncthing
@@ -41,6 +49,7 @@ modules:
         - syncthingplasmoid-qt6
 
       # filesystem and backup
+        - python3-btrfs
         - btrfsmaintenance
         - btrfs-progs
         - btrfs-assistant
@@ -79,10 +88,10 @@ modules:
         - lame-libs
 
       # build packagekit-bootc
-        - PackageKit-devel
-        - meson
-        - ninja-build
-        - glib2-devel
+      #   - PackageKit-devel
+      #   - meson
+      #   - ninja-build
+      #   - glib2-devel
 
     replace:
       - from-repo: rpmfusion-free
