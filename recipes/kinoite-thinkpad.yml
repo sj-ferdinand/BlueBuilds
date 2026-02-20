@@ -37,9 +37,14 @@ modules:
       packages:
         - fprintd
 
+  - type: files
+    files:
+      - source: thinkpad-root
+        destination: /
+
   - type: systemd
     system:
       enabled:
         - python3-validity.service
         - open-fprintd-suspend.service
-        - open-fprintd-restart-after-resume.service
+        - open-fprintd-resume.service

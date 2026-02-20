@@ -6,11 +6,10 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '7a'
+      BUILD_ID: '7b'
 
   - type: files
     files:
-
       - source: base-root
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
