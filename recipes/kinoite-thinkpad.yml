@@ -42,3 +42,8 @@ modules:
       enabled:
         - python3-validity.service
 
+  - type: files
+    files:
+      - source: thinkpad-root
+        destination: /
+

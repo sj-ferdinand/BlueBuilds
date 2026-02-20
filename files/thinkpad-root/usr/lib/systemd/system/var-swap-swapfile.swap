@@ -1,0 +1,3 @@
+[Swap]
+What=/var/swap/swapfile
+Options=sw,pri=1

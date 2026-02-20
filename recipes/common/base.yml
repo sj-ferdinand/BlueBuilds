@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '5n'
+      BUILD_ID: '6'
 
   - type: files
     files:
@@ -39,7 +39,7 @@ modules:
         - klassy
         - kcron
         - sddm-kcm
-        - plymouth-kcm
+        - oxygen-sounds
 
       # sync
         - syncthing
