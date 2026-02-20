@@ -7,7 +7,7 @@ These images are built on BlueBuild's Fedora Kinoite base, with a bunch of modif
 - extra DNF packages for codecs and utilities
 - flatpaks declared to be installed (with no user effort needed)
 - my own custom plymouth theme
-- extended initramfs to theoretically allow for hibernation (if I can get it to work in practice)
+- extended initramfs to add resume (from hibernate) support
 - custom builds per-device for drivers, video acceleration and other boring but useful things
 
 > [!IMPORTANT]
