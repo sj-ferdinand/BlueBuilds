@@ -1,8 +1,20 @@
 # BlueBuilds &nbsp; [![bluebuild build badge](https://github.com/sj-ferdinand/BlueBuilds/actions/workflows/build.yml/badge.svg)](https://github.com/sj-ferdinand/BlueBuilds/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for information.
 
-After setup, it is recommended you update this README to describe your custom image.
+
+These images are built on BlueBuild's Fedora Kinoite base, with a bunch of modifications including:
+- extra DNF packages for codecs and utilities
+- flatpaks declared to be installed (with no user effort needed)
+- my own custom plymouth theme
+- extended initramfs to theoretically allow for hibernation (if I can get it to work in practice)
+- custom builds per-device for drivers, video acceleration and other boring but useful things
+
+> [!IMPORTANT]
+> These images are **heavily** customised down to each device's drivers and my own use cases for them.
+> I would honestly not recommend pulling and using them yourself, these are exclusively for my own use and so probably won't be suitable for anyone else.
+>
+> With that said, it's pretty much all just .yml files so feel free to make your own builds based on these with your own changes.
 
 ## Installation
 
