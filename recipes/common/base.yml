@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '5j'
+      BUILD_ID: '5k'
 
   - type: files
     files:
@@ -149,7 +149,7 @@ modules:
     snippets:
       - "sudo plymouth-set-default-theme better-bgrt-mac-style"
 
-    scripts:
+    # scripts:
       # - base-add-fstab-extras.sh
       # - base-build-packagekit-bootc.sh
 
