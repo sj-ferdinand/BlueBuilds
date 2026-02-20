@@ -29,6 +29,10 @@ modules:
       packages:
         - intel-media-driver
 
+        - python3-validity
+        - open-fprintd
+        - fprintd-clients-pam
+
     remove:
       packages:
         - fprintd

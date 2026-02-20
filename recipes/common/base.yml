@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '5f'
+      BUILD_ID: '5g'
 
   - type: files
     files:
@@ -43,10 +43,10 @@ modules:
 
       # sync
         - syncthing
-        - syncthingctl-qt6
-        - syncthingfileitemaction-qt6
-        - syncthingtray-qt6
-        - syncthingplasmoid-qt6
+        #- syncthingctl-qt6
+        #- syncthingfileitemaction-qt6
+        #- syncthingtray-qt6
+        #- syncthingplasmoid-qt6
 
       # filesystem and backup
         - python3-btrfs
