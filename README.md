@@ -1,4 +1,4 @@
-# kinoite-custom-base &nbsp; [![bluebuild build badge](https://github.com/unnamed-programmer/kinoite-custom-base/actions/workflows/build.yml/badge.svg)](https://github.com/unnamed-programmer/kinoite-custom-base/actions/workflows/build.yml)
+# BlueBuilds &nbsp; [![bluebuild build badge](https://github.com/sj-ferdinand/BlueBuilds/actions/workflows/build.yml/badge.svg)](https://github.com/sj-ferdinand/BlueBuilds/actions/workflows/build.yml)
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
@@ -11,9 +11,9 @@ After setup, it is recommended you update this README to describe your custom im
 
 To rebase an existing atomic Fedora installation to the latest build:
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+- First rebase to the unsigned image, to get the proper signing keys and policies installed (where (image) is which device build you want to use):
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/unnamed-programmer/kinoite-custom-base:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/sj-ferdinand/kinoite-(image):latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -21,7 +21,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/unnamed-programmer/kinoite-custom-base:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sj-ferdinand/kinoite-(image):latest
   ```
 - Reboot again to complete the installation
   ```
