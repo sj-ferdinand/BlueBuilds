@@ -1,8 +1,0 @@
-[Unit]
-After=blockdev@dev-disk-by\x2duuid-2415\x2dB072.target
-
-[Mount]
-What=/dev/disk/by-uuid/2415-B072
-Where=/media/ARC64
-Type=exfat
-Options=nofail,umask=0000,uid=0000,gid=0000,user,noauto

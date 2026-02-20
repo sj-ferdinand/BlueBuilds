@@ -41,9 +41,5 @@ modules:
     system:
       enabled:
         - python3-validity.service
-
-  - type: files
-    files:
-      - source: thinkpad-root
-        destination: /
-
+        - open-fprintd-suspend.service
+        - open-fprintd-resume.service

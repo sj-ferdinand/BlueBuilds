@@ -1,8 +1,0 @@
-[Unit]
-After=blockdev@dev-disk-by\x2duuid-05320526\x2d064d\x2d4cf0\x2db651\x2d30c1bc8cb132.target
-
-[Mount]
-What=/dev/disk/by-uuid/05320526-064d-4cf0-b651-30c1bc8cb132
-Where=/media/KIOXIA
-Type=btrfs
-Options=noauto,nofail,compress=zstd:3,user,exec
