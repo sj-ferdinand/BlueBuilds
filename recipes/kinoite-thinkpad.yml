@@ -37,7 +37,8 @@ modules:
       packages:
         - fprintd
 
-  - type: script
-    snippets:
-      - "sudo systemctl enable python3-validity.service"
+  - type: systemd
+    system:
+      enabled:
+        - python3-validity.service
 
