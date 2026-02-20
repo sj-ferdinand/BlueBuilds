@@ -1,0 +1,8 @@
+[Unit]
+After=blockdev@dev-disk-by\x2duuid-77db8d02\x2d85cb\x2d405c\x2d85d2\x2dd2826b0dc72d.target
+
+[Mount]
+What=/dev/disk/by-uuid/77db8d02-85cb-405c-85d2-d2826b0dc72d
+Where=/media/TOSHIBA
+Type=btrfs
+Options=subvolid=5,nofail,compress=zstd:3,user,noauto
