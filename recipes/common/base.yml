@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '5l'
+      BUILD_ID: '5m'
 
   - type: files
     files:
@@ -143,7 +143,8 @@ modules:
         remove:
           - org.mozilla.firefox
 
-      - scope: user # Also add Flathub user repo, but no user packages
+      - notify: false
+        scope: user # Also add Flathub user repo, but no user packages
 
   - type: script
     snippets:
@@ -152,6 +153,8 @@ modules:
     # scripts:
       # - base-add-fstab-extras.sh
       # - base-build-packagekit-bootc.sh
+
+  - type: systemd
 
   - type: initramfs
 
