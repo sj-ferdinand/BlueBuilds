@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '7e'
+      BUILD_ID: '7f'
 
   - type: files
     files:
@@ -95,6 +95,7 @@ modules:
 
     replace:
       - from-repo: rpmfusion-free
+        allow-erasing: true
         packages:
           - ffmpeg
           - ffmpeg-libs
