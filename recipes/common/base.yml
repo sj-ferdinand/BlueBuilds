@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '7d'
+      BUILD_ID: '7e'
 
   - type: files
     files:
@@ -123,6 +123,8 @@ modules:
         # If no repo information is specified, Flathub will be used by default
 
         install: # system flatpaks we want all users to have and not remove
+
+          - org.gtk.Gtk3theme.Breeze
 
         # web
           - app.zen_browser.zen
