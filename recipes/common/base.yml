@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '7c'
+      BUILD_ID: '7d'
 
   - type: files
     files:
@@ -27,7 +27,7 @@ modules:
     install:
       packages:
         - gcc
-        - python
+        # - python
         - python3.13
         - python-launcher
         - python3-pip
