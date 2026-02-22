@@ -21,13 +21,13 @@ modules:
           - com.valvesoftware.Steam
           - io.itch.itch
           - org.libretro.RetroArch
-          
+
           - org.kde.kmahjongg
           - org.kde.kmines
           - org.kde.ksudoku
           - org.kde.knights
           - org.kde.kbounce
-          - org.kde.kpatience
+          - org.kde.kpat
           - org.kde.kjumpingcube
 
         # security
