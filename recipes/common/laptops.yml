@@ -76,6 +76,7 @@ modules:
 
           # audio
           - org.audacityteam.Audacity
+          - org.musescore.MuseScore
 
   - type: script
     scripts:
