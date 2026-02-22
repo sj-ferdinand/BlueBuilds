@@ -21,6 +21,14 @@ modules:
           - com.valvesoftware.Steam
           - io.itch.itch
           - org.libretro.RetroArch
+          
+          - org.kde.kmahjongg
+          - org.kde.kmines
+          - org.kde.ksudoku
+          - org.kde.knights
+          - org.kde.kbounce
+          - org.kde.kpatience
+          - org.kde.kjumpingcube
 
         # security
           - io.ente.auth
@@ -35,6 +43,7 @@ modules:
           - org.kde.kcalc
           - org.kde.kamoso
           - org.kde.qrca
+          - org.kde.alligator
 
         # printing
           - net.epson.epsonscan2

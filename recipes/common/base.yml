@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '7f'
+      BUILD_ID: '8'
 
   - type: files
     files:
@@ -27,13 +27,13 @@ modules:
     install:
       packages:
         - gcc
-        # - python
-        - python3.13
+        - python
         - python-launcher
         - python3-pip
         - fish
         - git
         - monitor-edid
+        - setroubleshoot
         
       # kde additions
         - klassy
@@ -124,8 +124,9 @@ modules:
         # If no repo information is specified, Flathub will be used by default
 
         install: # system flatpaks we want all users to have and not remove
-
           - org.gtk.Gtk3theme.Breeze
+
+          - io.github.jonmagon.kdiskmark
 
         # web
           - app.zen_browser.zen
