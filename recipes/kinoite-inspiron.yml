@@ -20,6 +20,12 @@ modules:
     properties:
       DEFAULT_HOSTNAME: inspiron5415
 
+  - type: dnf
+    install:
+      packages:
+        - rEFInd
+        - rEFInd-tools
+
   - type: default-flatpaks
     configurations:
       - notify: true
