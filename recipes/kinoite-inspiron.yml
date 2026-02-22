@@ -25,6 +25,8 @@ modules:
       packages:
         - rEFInd
         - rEFInd-tools
+        - virt-manager
+        - libvirt
 
   - type: default-flatpaks
     configurations:
@@ -32,4 +34,3 @@ modules:
         scope: system
         install:
           - io.github.pwr_solaar.solaar
-          - org.virt_manager.virt-manager
