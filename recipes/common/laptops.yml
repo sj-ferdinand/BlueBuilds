@@ -37,6 +37,7 @@ modules:
           - io.github.kriptolix.Poliedros
           - com.github.cassidyjames.dippi
           - com.oppzippy.OpenSCQ30
+          - app.comaps.comaps
 
         # kde utils
           - org.kde.kcolorchooser

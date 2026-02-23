@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '8f'
+      BUILD_ID: '8g'
 
   - type: files
     files:
@@ -97,6 +97,15 @@ modules:
       - from-repo: rpmfusion-free
         allow-erasing: true
         packages:
+          - vvenc-libs
+          - libvvenc
+          - libheif
+          - glycin-loaders
+          - glycin-libs
+          - libglycin
+          - libgdk_pixbuf
+          - librsvg
+
           - ffmpeg
           - ffmpeg-libs
           - libva
