@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '8g'
+      BUILD_ID: '8h'
 
   - type: files
     files:
@@ -98,13 +98,13 @@ modules:
         allow-erasing: true
         packages:
           - vvenc-libs
-          - libvvenc
+          #- libvvenc
           - libheif
           - glycin-loaders
           - glycin-libs
-          - libglycin
-          - libgdk_pixbuf
-          - librsvg
+          #- libglycin
+          #- libgdk_pixbuf
+          #- librsvg
 
           - ffmpeg
           - ffmpeg-libs
