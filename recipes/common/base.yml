@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '8d'
+      BUILD_ID: '8e'
 
   - type: files
     files:
@@ -125,6 +125,7 @@ modules:
 
         install: # system flatpaks we want all users to have and not remove
           - org.gtk.Gtk3theme.Breeze
+          - org.gtk.Gtk3theme.Breeze-Dark
 
           - io.github.jonmagon.kdiskmark
 
