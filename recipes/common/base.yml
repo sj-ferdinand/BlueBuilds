@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '8e'
+      BUILD_ID: '8f'
 
   - type: files
     files:
@@ -154,6 +154,7 @@ modules:
   - type: script
     snippets:
       - "sudo plymouth-set-default-theme better-bgrt-mac-style"
+      - "echo 'ShowBuild=true' | sudo tee -a /etc/xdg/kcm-about-distrorc"
 
     # scripts:
       # - base-build-packagekit-bootc.sh
