@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '8h'
+      BUILD_ID: '8i'
 
   - type: files
     files:
@@ -93,19 +93,16 @@ modules:
       #   - ninja-build
       #   - glib2-devel
 
-    replace:
-      - from-repo: rpmfusion-free
-        allow-erasing: true
+    remove:
         packages:
           - vvenc-libs
-          #- libvvenc
+          - libvvenc
           - libheif
           - glycin-loaders
           - glycin-libs
-          #- libglycin
-          #- libgdk_pixbuf
-          #- librsvg
-
+          - libglycin
+          - libgdk_pixbuf
+          - librsvg
           - ffmpeg
           - ffmpeg-libs
           - libva
@@ -114,6 +111,26 @@ modules:
           - mesa-vulkan-drivers
           - vulkan-loader
           - mesa-libGLU
+
+    install:
+      allow-erasing: true
+      packages:
+        - vvenc-libs
+        - libvvenc
+        - libheif
+        - glycin-loaders
+        - glycin-libs
+        - libglycin
+        - libgdk_pixbuf
+        - librsvg
+        - ffmpeg
+        - ffmpeg-libs
+        - libva
+        - libva-utils
+        - mesa-dri-drivers
+        - mesa-vulkan-drivers
+        - vulkan-loader
+        - mesa-libGLU
 
 
     remove:

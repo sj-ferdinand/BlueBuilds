@@ -10,6 +10,8 @@ modules:
         - wine
         - winetricks
 
+        - steam
+
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
@@ -18,7 +20,6 @@ modules:
         install: # system flatpaks we want all users to have and not remove
 
         # games
-          - com.valvesoftware.Steam
           - io.itch.itch
           - org.libretro.RetroArch
 
