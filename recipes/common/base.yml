@@ -2,14 +2,14 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
 modules:
-  - from-file: codecs-rm.yml
-  - from-file: codecs-in.yml
+  - from-file: common/codecs-rm.yml
+  - from-file: common/codecs-in.yml
 
   - type: os-release
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '8j'
+      BUILD_ID: '8l'
 
   - type: files
     files:
