@@ -2,6 +2,9 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
 modules:
+  - from-file: codecs-rm.yml
+  - from-file: codecs-in.yml
+
   - type: os-release
     properties:
       NAME: Fedora Linux
