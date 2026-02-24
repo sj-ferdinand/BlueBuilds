@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '8i'
+      BUILD_ID: '8j'
 
   - type: files
     files:
@@ -92,7 +92,7 @@ modules:
       #   - meson
       #   - ninja-build
       #   - glib2-devel
-
+  - type: dnf
     remove:
         packages:
           - vvenc-libs
