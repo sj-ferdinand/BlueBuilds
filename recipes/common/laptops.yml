@@ -10,7 +10,6 @@ modules:
         - wine
         - winetricks
 
-        - steam
 
   - type: default-flatpaks
     configurations:
@@ -22,6 +21,7 @@ modules:
         # games
           - io.itch.itch
           - org.libretro.RetroArch
+          - com.valvesoftware.Steam
 
           - org.kde.kmahjongg
           - org.kde.kmines
