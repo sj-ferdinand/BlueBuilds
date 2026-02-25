@@ -6,7 +6,7 @@ modules:
     properties:
       NAME: Fedora Linux
       PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '8m'
+      BUILD_ID: '8n'
 
   - type: files
     files:
@@ -110,7 +110,18 @@ modules:
           - mesa-vulkan-drivers
           - vulkan-loader
           - mesa-libGLU
-
+          - libavcodec
+          - libavfilter
+          - libavformat
+          - libavutil
+          - libpostproc
+          - libswresample
+          - libswscale
+      - from-repo: rpmfusion-nonfree
+        allow-erasing: true
+        packages:
+          - old: libfdk-aac
+            new: fdk-aac
 
     remove:
       auto-remove: true
