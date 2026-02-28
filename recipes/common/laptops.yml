@@ -2,26 +2,24 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
 modules:
-
   - type: dnf
     install:
       packages:
         - gutenprint-cups
-        - wine
+        - wine # getting wine flatpak to work well is a pain icl
         - winetricks
 
+        - steam # the flatpak struggles with some stuff like big picture
 
   - type: default-flatpaks
     configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
+      - notify: true
+        scope: system # flathub, only using a system repo - see base.yml for brief explanation
+        install: 
 
         # games
           - io.itch.itch
           - org.libretro.RetroArch
-          - com.valvesoftware.Steam
 
           - org.kde.kmahjongg
           - org.kde.kmines
@@ -34,7 +32,7 @@ modules:
         # security
           - io.ente.auth
 
-        # misc useful/fun
+        # misc, neat
           - io.github.kriptolix.Poliedros
           - com.github.cassidyjames.dippi
           - com.oppzippy.OpenSCQ30
@@ -82,6 +80,7 @@ modules:
 
   - type: script
     scripts:
-      - laptops-install-printer-driver-rpm.sh
+      - laptops-install-printer-driver-rpm.sh 
+        # epson provide driver RPMs but messed up the hashing? this shouldn't be necessary but works so... if it ain't broken don't fix it
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

@@ -3,7 +3,7 @@
 
 modules:
   - type: dnf
-
     install:
       packages:
+      # intel hardware acceleration drivers
         - intel-media-driver

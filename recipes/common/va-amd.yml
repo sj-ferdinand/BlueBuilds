@@ -3,8 +3,8 @@
 
 modules:
   - type: dnf
-
     install:
       packages:
+      # AMD hardware acceleration drivers
         - mesa-va-drivers-freeworld
         - mesa-vdpau-drivers-freeworld

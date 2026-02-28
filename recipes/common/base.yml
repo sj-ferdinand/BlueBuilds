@@ -4,25 +4,22 @@
 modules:
   - type: os-release
     properties:
-      NAME: Fedora Linux
-      PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '8p'
+      # NAME: Fedora Linux
+      # PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
+      BUILD_ID: '9'
 
   - type: files
     files:
       - source: base-root
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+        destination: /
 
   - type: dnf
     repos:
       nonfree: rpmfusion
 
       files:
-        - https://download.opensuse.org/download/repositories/home:/mkittler/Fedora_%OS_VERSION%/home:mkittler.repo
-        - https://download.opensuse.org/download/repositories/home:/paul4us/Fedora_%OS_VERSION%/home:paul4us.repo
-
-      # copr:
-      #  -
+        - https://download.opensuse.org/download/repositories/home:/mkittler/Fedora_%OS_VERSION%/home:mkittler.repo # for syncthingtray
+        - https://download.opensuse.org/download/repositories/home:/paul4us/Fedora_%OS_VERSION%/home:paul4us.repo # for klassy
 
     install:
       packages:
@@ -36,14 +33,14 @@ modules:
         - setroubleshoot
         
       # kde additions
-        - klassy
+        - klassy # this requires the paul4us repo
         - kcron
         - sddm-kcm
         - oxygen-sounds
 
       # sync
         - syncthing
-        - syncthingctl-qt6
+        - syncthingctl-qt6 # these require the mkittler repo
         - syncthingfileitemaction-qt6
         - syncthingtray-qt6
         - syncthingplasmoid-qt6
@@ -119,23 +116,21 @@ modules:
     remove:
       auto-remove: true
       packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - pipewire-config-raop
-        - ffmpeg-free
+        - pipewire-config-raop # might consider unblocking this at some point but it gets on my nerves
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
   - type: default-flatpaks
     configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
+      - notify: true
+        scope: system # (default repo is Flathub)
 
-        install: # system flatpaks we want all users to have and not remove
+        install:
+        # themes
           - org.gtk.Gtk3theme.Breeze
           - org.gtk.Gtk3theme.Breeze-Dark
 
+        # utils
           - io.github.jonmagon.kdiskmark
 
         # web
@@ -157,13 +152,15 @@ modules:
         remove:
           - org.mozilla.firefox
 
-      - notify: false
-        scope: user # Also add Flathub user repo, but no user packages
+      # - notify: false
+      #   scope: user
+      # I don't actually want a flatpak user repo
+      # maybe this is controversial but I don't like program data in /home and my devices only ever have one user anyway
 
   - type: script
     snippets:
-      - "sudo plymouth-set-default-theme better-bgrt-mac-style"
-      - "echo 'ShowBuild=true' | sudo tee -a /etc/xdg/kcm-about-distrorc"
+      - "sudo plymouth-set-default-theme better-bgrt-mac-style" # apply the custom plymouth theme loaded into /usr/share/plymouth/themes earlier
+      - "echo 'ShowBuild=true' | sudo tee -a /etc/xdg/kcm-about-distrorc" # show the build ID in KDE info centre - it's useful to see both the upstream image and personal build versions
 
     # scripts:
       # - base-build-packagekit-bootc.sh

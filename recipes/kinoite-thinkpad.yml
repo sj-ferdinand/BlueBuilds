@@ -1,16 +1,13 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# image will be published to ghcr.io/<user>/<name>
+
 name: kinoite-thinkpad
-# description will be included in the image's metadata
 description: Custom Fedora Kinoite image with personal tweaks - configured for hardware and use of a Thinkpad X1 Carbon 5th gen.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/blue-build/base-images/fedora-kinoite
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: latest
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - from-file: common/base.yml
   - from-file: common/laptops.yml
@@ -23,23 +20,22 @@ modules:
   - type: dnf
     repos:
       copr:
-        - sneexy/python-validity
+        - sneexy/python-validity # for open-fprintd and validity fingerprint reader support
+
+    replace:
+      # require copr:sneexy/python-validity
+      - old: fprintd
+        new: open-fprintd
 
     install:
       packages:
-        - intel-media-driver
-
+      # fingerprint reader drivers, these require copr:sneexy/python-validity
         - python3-validity
-        - open-fprintd
         - fprintd-clients-pam
-
-    remove:
-      packages:
-        - fprintd
 
   - type: files
     files:
-      - source: thinkpad-root
+      - source: thinkpad-root # patch open-fprintd-resume
         destination: /
 
   - type: systemd
@@ -47,4 +43,4 @@ modules:
       enabled:
         - python3-validity.service
         - open-fprintd-suspend.service
-        - open-fprintd-resume.service
+        - open-fprintd-resume.service # patched version in /etc

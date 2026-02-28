@@ -1,16 +1,13 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# image will be published to ghcr.io/<user>/<name>
+
 name: kinoite-gutron
-# description will be included in the image's metadata
-description: Custom Fedora Kinoite image with personal tweaks - configured for hardware and use of a miniPC server.
+description: Custom Fedora Kinoite image with personal tweaks - configured for hardware and use of an intel-based PC I use as a mini-server.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/blue-build/base-images/fedora-kinoite
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: latest
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - from-file: common/base.yml
   - from-file: common/va-intel.yml
@@ -22,8 +19,6 @@ modules:
   - type: dnf
     install:
       packages:
-        - glances
-
       # fs utils
         - ncdu
         - hd-idle
@@ -31,6 +26,7 @@ modules:
         - iotop-c
 
       # docker
+        - docker
         - docker-compose
 
       # NAS
