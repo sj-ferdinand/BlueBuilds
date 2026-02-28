@@ -4,9 +4,8 @@
 modules:
   - type: os-release
     properties:
-      # NAME: Fedora Linux
-      # PRETTY_NAME: Fedora Linux 43 (Kinoite - Custom BlueBuild)
-      BUILD_ID: '9d'
+      PRETTY_NAME: Fedora Kinoite (BlueBuild)
+      BUILD_ID: '9e'
 
   - type: files
     files:
@@ -16,7 +15,6 @@ modules:
   - type: dnf
     repos:
       nonfree: rpmfusion
-
       files:
         - https://download.opensuse.org/download/repositories/home:/mkittler/Fedora_%OS_VERSION%/home:mkittler.repo # for syncthingtray
         - https://download.opensuse.org/download/repositories/home:/paul4us/Fedora_%OS_VERSION%/home:paul4us.repo # for klassy

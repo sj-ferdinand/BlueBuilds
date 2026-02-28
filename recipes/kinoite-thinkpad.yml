@@ -24,7 +24,7 @@ modules:
 
     replace:
       # require copr:sneexy/python-validity
-      - from-repo: sneexy/python-validity
+      - from-repo: copr:copr.fedorainfracloud.org:sneexy:python-validity
         packages:
         - old: fprintd
           new: open-fprintd
