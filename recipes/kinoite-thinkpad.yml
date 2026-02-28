@@ -24,7 +24,7 @@ modules:
 
     replace:
       # require copr:sneexy/python-validity
-      - from-repo: python-validity
+      - from-repo: sneexy/python-validity
         packages:
         - old: fprintd
           new: open-fprintd
