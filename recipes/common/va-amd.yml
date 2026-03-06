@@ -8,3 +8,7 @@ modules:
       # AMD hardware acceleration drivers
         - mesa-va-drivers-freeworld
         - mesa-vdpau-drivers-freeworld
+
+    remove:
+      packages:
+        - mesa-va-drivers

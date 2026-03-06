@@ -22,18 +22,13 @@ modules:
       copr:
         - sneexy/python-validity # for open-fprintd and validity fingerprint reader support
 
-    replace:
-      # require copr:sneexy/python-validity
-      - from-repo: copr:copr.fedorainfracloud.org:sneexy:python-validity
-        packages:
-        - old: fprintd
-          new: open-fprintd
-
     install:
+      allow-erasing: true
       packages:
       # fingerprint reader drivers, these require copr:sneexy/python-validity
         - python3-validity
         - fprintd-clients-pam
+        - open-fprintd
 
   - type: files
     files:
