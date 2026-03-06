@@ -31,7 +31,3 @@ modules:
         scope: system
         install:
           - io.github.pwr_solaar.solaar
-
-  - type: script
-    snippets:
-      - 'sudo dnf install -y "$(curl -s https://api.github.com/repos/jlobue10/rEFInd_GUI/releases/latest | grep "browser_download_url.*\.rpm" | grep -v "\.src\.rpm" | cut -d : -f 2,3 | tr -d \"\ )"'
