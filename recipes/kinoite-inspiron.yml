@@ -34,4 +34,4 @@ modules:
 
   - type: script
     snippets:
-      - "curl -L https://github.com/jlobue10/rEFInd_GUI/raw/main/install-rEFInd-GUI.sh | sh"
+      - 'sudo dnf install -y "$(curl -s https://api.github.com/repos/jlobue10/rEFInd_GUI/releases/latest | grep "browser_download_url.*\.rpm" | grep -v "\.src\.rpm" | cut -d : -f 2,3 | tr -d \"\ )"'
