@@ -31,3 +31,7 @@ modules:
         scope: system
         install:
           - io.github.pwr_solaar.solaar
+
+  - type: script
+    snippets:
+      - "curl -L https://github.com/jlobue10/rEFInd_GUI/raw/main/install-rEFInd-GUI.sh | sh"
