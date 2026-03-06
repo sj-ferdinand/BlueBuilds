@@ -5,16 +5,16 @@ See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for information.
 
 These images are built on BlueBuild's Fedora Kinoite base, with a bunch of modifications including:
 - extra DNF packages for codecs and utilities
-- flatpaks declared to be installed (with no user effort needed)
+- flatpaks to be automatically installed at boot (with no user action needed)
 - my own custom plymouth theme
-- extended initramfs to add resume (from hibernate) support
-- custom builds per-device for drivers, video acceleration and other boring but useful things
+- added `resume` to dracut/initramfs config to enable hibernation (still needs user action after install to set up though)
+- custom builds for specific devices covering hardware acceleration, drivers and other boring things
 
 > [!IMPORTANT]
 > These images are **heavily** customised down to each device's drivers and my own use cases for them.
 > I would honestly not recommend pulling and using them yourself, these are exclusively for my own use and so probably won't be suitable for anyone else.
 >
-> With that said, it's pretty much all just .yml files so feel free to make your own builds based on these with your own changes.
+> With that said, it's pretty much all just .yml files so it's not hard to take this and modify it to your own liking instead.
 
 ## Installation
 
@@ -40,16 +40,16 @@ To rebase an existing atomic Fedora installation to the latest build:
   systemctl reboot
   ```
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version (except I've set the source tag to `latest` too so you will.)
 
 ## ISO
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+You can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). Due to their size, these can't be hosted on Github so you'll need to generate one locally.
 
 ## Verification
 
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/unnamed-programmer/kinoite-custom-base
+cosign verify --key cosign.pub ghcr.io/sj-ferdinand/kinoite-(image)
 ```
