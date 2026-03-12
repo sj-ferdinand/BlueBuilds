@@ -6,4 +6,4 @@ modules:
     install:
       packages:
       # intel hardware acceleration drivers
-        - intel-media-driver
+        - libva-intel-driver

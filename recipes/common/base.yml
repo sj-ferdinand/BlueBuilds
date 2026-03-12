@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '9i'
+      BUILD_ID: '9j'
 
   - type: files
     files:
@@ -33,7 +33,6 @@ modules:
       # kde additions
         - klassy # this requires the paul4us repo
         - kcron
-        - sddm-kcm
         - oxygen-sounds
 
       # sync
@@ -81,6 +80,7 @@ modules:
         - gstreamer1-plugins-ugly-free
         - lame
         - lame-libs
+        - openh264
 
       # build packagekit-bootc
       #   - PackageKit-devel
