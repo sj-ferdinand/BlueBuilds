@@ -16,8 +16,11 @@ modules:
       DEFAULT_HOSTNAME: kinoite-vm
 
   - type: dnf
-    replace:
-      - from-repo: fedora
-        packages:
-        - old: sddm
-          new: plasma-login-manager
+    install:
+      packages:
+        - plasma-login-manager
+
+    remove:
+      auto-remove: true
+      packages:
+        - sddm
