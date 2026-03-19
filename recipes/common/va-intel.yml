@@ -1,6 +1,11 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
+name: kinoite-common-va-intel
+description: ""
+base-image: ghcr.io/blue-build/base-images/fedora-kinoite
+image-version: latest
+
 modules:
   - type: dnf
     install:

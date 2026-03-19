@@ -17,6 +17,7 @@ modules:
 
   - type: dnf
     replace:
-      - packages:
+      - from-repo: fedora
+        packages:
         - old: sddm
           new: plasma-login-manager
