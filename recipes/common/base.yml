@@ -1,16 +1,11 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-
-name: kinoite-common-base
-description: ""
-base-image: ghcr.io/blue-build/base-images/fedora-kinoite
-image-version: latest
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 
 modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '9m'
+      BUILD_ID: '10'
 
   - type: files
     files:
