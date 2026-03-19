@@ -22,7 +22,6 @@ modules:
         - glances
       
       # fs utils
-        - ncdu
         - hd-idle
         - fatrace
         - iotop-c
