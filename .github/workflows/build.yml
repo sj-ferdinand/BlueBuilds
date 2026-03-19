@@ -30,6 +30,7 @@ jobs:
           - kinoite-thinkpad.yml
           - kinoite-inspiron.yml
           - kinoite-gutron.yml
+          - kinoite-testbed.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
