@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '9j'
+      BUILD_ID: '9k'
 
   - type: files
     files:
@@ -47,6 +47,7 @@ modules:
         - btrfsmaintenance
         - btrfs-progs
         - btrfs-assistant
+        - duperemove
         - btrbk
         - trash-cli
 
