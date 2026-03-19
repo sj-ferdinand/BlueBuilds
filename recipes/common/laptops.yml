@@ -82,5 +82,7 @@ modules:
     scripts:
       - laptops-install-printer-driver-rpm.sh 
         # epson provide driver RPMs but messed up the hashing? technically dodgy asf but does work so i won't mess with it
+    snippets:
+      - curl -fsSL "https://steambrew.app/install.sh" | bash
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
