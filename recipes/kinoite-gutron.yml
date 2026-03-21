@@ -32,6 +32,3 @@ modules:
 
       # NAS
         - samba
-
-      # automations
-        - yt-dlp

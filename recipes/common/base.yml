@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '10f'
+      BUILD_ID: '10g'
 
   - type: files
     files:
@@ -29,6 +29,7 @@ modules:
         - git
         - monitor-edid
         - setroubleshoot
+        - yt-dlp
         
       # kde additions
         - klassy # this requires the paul4us repo
@@ -39,7 +40,7 @@ modules:
         - syncthing
         - syncthingctl-qt6 # these require the mkittler repo
         - syncthingfileitemaction-qt6
-        - syncthingtray-qt6
+        #- syncthingtray-qt6
         - syncthingplasmoid-qt6
 
       # filesystem and backup
