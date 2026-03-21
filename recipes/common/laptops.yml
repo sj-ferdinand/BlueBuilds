@@ -11,6 +11,8 @@ modules:
 
         - steam # the flatpak struggles with some stuff like big picture
 
+        - yt-dlp
+
   - type: default-flatpaks
     configurations:
       - notify: true
