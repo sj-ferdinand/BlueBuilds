@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '10h'
+      BUILD_ID: '10i'
 
   - type: files
     files:
@@ -165,6 +165,11 @@ modules:
 
     # scripts:
       # - base-build-packagekit-bootc.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - tailscaled.service
 
   - type: initramfs
 
