@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '10i'
+      BUILD_ID: '10j'
 
   - type: files
     files:
@@ -117,6 +117,7 @@ modules:
     remove:
       auto-remove: true
       packages:
+        - fcitx5
         - pipewire-config-raop # might consider unblocking this at some point but it gets on my nerves
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
