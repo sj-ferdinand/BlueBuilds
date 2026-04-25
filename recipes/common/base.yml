@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '10j'
+      BUILD_ID: '10k'
 
   - type: files
     files:
@@ -21,7 +21,8 @@ modules:
 
     install:
       packages:
-        - gcc
+        - perf
+        # - gcc
         - python
         - python-launcher
         - python3-pip
