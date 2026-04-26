@@ -21,11 +21,6 @@ modules:
       packages:
         - glances
       
-      # fs utils
-        - hd-idle
-        - fatrace
-        - iotop-c
-
       # docker
         - docker
         - docker-compose
