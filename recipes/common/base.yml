@@ -109,7 +109,7 @@ modules:
           - glycin-libs
           - ffmpeg-libs
           - libva
-          - libva-utils
+          #- libva-utils
           - mesa-dri-drivers
           - mesa-vulkan-drivers
           - vulkan-loader
