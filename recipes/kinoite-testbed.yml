@@ -124,29 +124,32 @@ modules:
       #   - ninja-build
       #   - glib2-devel
 
-        - repo: rpmfusion-free
-          allow-erasing: true
-          packages:
-            - ffmpeg
-            - vvenc-libs
-            - libheif
-            - glycin-loaders
-            - glycin-libs
-            - ffmpeg-libs
-            - libva
-            - libva-utils
-            - mesa-dri-drivers
-            - mesa-vulkan-drivers
-            - vulkan-loader
-            - mesa-libGLU
-        - repo: rpmfusion-nonfree
-          allow-erasing: true
-          packages:
-            - fdk-aac
+    replace:
+      - from-repo: rpmfusion-free
+        allow-erasing: true
+        packages:
+          - old: ffmpeg-free
+            new: ffmpeg
+          - vvenc-libs
+          - libheif
+          - glycin-loaders
+          - glycin-libs
+          - ffmpeg-libs
+          - libva
+          - mesa-dri-drivers
+          - mesa-vulkan-drivers
+          - vulkan-loader
+          - mesa-libGLU
+      - from-repo: rpmfusion-nonfree
+        allow-erasing: true
+        packages:
+          - old: libfdk-aac
+            new: fdk-aac
 
     remove:
       auto-remove: true
       packages:
+        - fcitx5
         - pipewire-config-raop # might consider unblocking this at some point but it gets on my nerves
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
