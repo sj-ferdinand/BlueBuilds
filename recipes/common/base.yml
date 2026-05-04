@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '10p'
+      BUILD_ID: '10q'
 
   - type: files
     files:
@@ -114,6 +114,8 @@ modules:
           - mesa-vulkan-drivers
           - vulkan-loader
           - mesa-libGLU
+          - x264-libs
+          - x265-libs
       - from-repo: rpmfusion-nonfree
         allow-erasing: true
         packages:
@@ -124,6 +126,7 @@ modules:
       auto-remove: true
       packages:
         - fcitx5
+        - fcitx5-*
         - pipewire-config-raop # might consider unblocking this at some point but it gets on my nerves
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
