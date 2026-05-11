@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '10q'
+      BUILD_ID: '11'
 
   - type: files
     files:
@@ -17,7 +17,7 @@ modules:
       nonfree: rpmfusion
       files:
         - https://download.opensuse.org/download/repositories/home:/mkittler/Fedora_%OS_VERSION%/home:mkittler.repo # for syncthingtray
-        - https://download.opensuse.org/download/repositories/home:/paul4us/Fedora_%OS_VERSION%/home:paul4us.repo # for klassy
+        - https://download.opensuse.org/download/repositories/home:/paulmcauley/Fedora_%OS_VERSION%/home:paulmcauley.repo # for klassy
 
     install:
       packages:
