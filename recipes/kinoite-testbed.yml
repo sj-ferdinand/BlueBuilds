@@ -5,8 +5,8 @@ name: kinoite-testbed
 description: Custom Fedora Kinoite image with personal tweaks - testing image for potentially breaking changes
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: quay.io/fedora-ostree-desktops/kinoite
-image-version: 44
+base-image: ghcr.io/blue-build/base-images/fedora-kinoite
+image-version: latest
 
 modules:
   - from-file: common/base.yml
