@@ -23,3 +23,5 @@ modules:
   - type: script
     snippets:
       - "sudo plymouth-set-default-theme unified-bgrt" # apply the custom plymouth theme loaded into /usr/share/plymouth/themes earlier
+
+  - type: initramfs
