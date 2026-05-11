@@ -14,3 +14,12 @@ modules:
   - type: os-release
     properties:
       DEFAULT_HOSTNAME: kinoite-testbed
+
+  - type: files
+    files:
+      - source: testbed-root
+        destination: /
+
+  - type: script
+    snippets:
+      - "sudo plymouth-set-default-theme unified-bgrt" # apply the custom plymouth theme loaded into /usr/share/plymouth/themes earlier
