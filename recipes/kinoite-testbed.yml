@@ -14,18 +14,3 @@ modules:
   - type: os-release
     properties:
       DEFAULT_HOSTNAME: kinoite-testbed
-
-  - type: dnf
-    install:
-      packages:
-        - plasma-login-manager
-
-    remove:
-      auto-remove: true
-      packages:
-        - sddm
-
-  - type: systemd
-    system:
-      enabled:
-        - plasmalogin.service

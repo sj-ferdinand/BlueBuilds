@@ -24,13 +24,7 @@ modules:
         - rEFInd-tools
         - virt-manager
         - libvirt
-        - plasma-login-manager
-    
-    remove:
-      auto-remove: true
-      packages:
-        - sddm
-
+        
   - type: default-flatpaks
     configurations:
       - notify: true
@@ -38,7 +32,3 @@ modules:
         install:
           - io.github.pwr_solaar.solaar
 
-  - type: systemd
-    system:
-      enabled:
-        - plasmalogin.service  
