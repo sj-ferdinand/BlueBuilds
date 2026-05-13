@@ -45,6 +45,7 @@ modules:
           - org.kde.qrca
           - org.kde.alligator
           - org.kde.krdc
+          - org.kde.okteta
 
         # printing
           - net.epson.epsonscan2
