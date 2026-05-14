@@ -46,6 +46,7 @@ modules:
           - org.kde.alligator
           - org.kde.krdc
           - org.kde.okteta
+          - org.kde.kompare
 
         # printing
           - net.epson.epsonscan2
