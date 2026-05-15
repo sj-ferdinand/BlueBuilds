@@ -37,7 +37,7 @@ modules:
   - type: script
     snippets:
       - "ls /usr/lib/firmware/edid"
-      - "chown root:root /usr/lib/firmware/edid/e214i-edid.bin"
+      - "sudo chown root:root /usr/lib/firmware/edid/e241i-edid.bin"
 
   - type: kargs
     kargs:
