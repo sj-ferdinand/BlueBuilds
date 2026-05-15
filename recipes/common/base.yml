@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '11l'
+      BUILD_ID: '11m'
 
   - type: files
     files:
@@ -185,7 +185,5 @@ modules:
     system:
       enabled:
         - tailscaled.service
-
-  - type: initramfs
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

@@ -5,3 +5,5 @@ modules:
   - type: script
     scripts:
       - better-build-id.sh
+
+  - type: initramfs

@@ -39,6 +39,14 @@ modules:
       - "ls /usr/lib/firmware/edid"
       - "sudo chown root:root /usr/lib/firmware/edid/e241i-edid.bin"
 
+  - type: systemd
+    system:
+      enabled:
+        - sshd.service
+        - docker.service
+        - cockpit.socket
+        - glances.service
+
   - type: kargs
     kargs:
       - drm.edid_firmware:edid/e241i-edid.bin
