@@ -177,7 +177,7 @@ modules:
     snippets:
       - "sudo plymouth-set-default-theme better-bgrt-mac-style" # apply the custom plymouth theme loaded into /usr/share/plymouth/themes earlier
       - "echo 'ShowBuild=true' | sudo tee -a /etc/xdg/kcm-about-distrorc" # show the build ID in KDE info centre - it's useful to see both the upstream image and personal build versions
-      - "sed -i -e 's/$(cat /etc/os-release | grep BUILD_ID | cut -d \" -f 2)/$(cat /etc/os-release | grep OSTREE_VERSION | cut -d \" -f 2)-$(cat /etc/os-release | grep BUILD_ID | cut -d \" -f 2)/g' ~/Documents/os-release"
+      - sed -i -e 's/$(cat /etc/os-release | grep BUILD_ID | cut -d " -f 2)/$(cat /etc/os-release | grep OSTREE_VERSION | cut -d " -f 2)-$(cat /etc/os-release | grep BUILD_ID | cut -d " -f 2)/g' /etc/os-release
     
   - type: systemd
     system:
