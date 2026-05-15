@@ -28,3 +28,17 @@ modules:
 
       # NAS
         - samba
+
+  - type: files
+    files:
+      - source: gutron-root
+        destination: /
+
+  - type: script
+    snippets:
+      - "sudo chown root:root /usr/lib/firmware/edid/e214i-edid.bin"
+
+  - type: kargs
+    kargs:
+      - drm.edid_firmware=DP-1:edid/e241i-edid.bin
+      - video=DP-1:1920x1200@60e
