@@ -32,3 +32,5 @@ modules:
         install:
           - io.github.pwr_solaar.solaar
 
+  - from-file: common/base-after.yml
+

@@ -41,3 +41,6 @@ modules:
         - python3-validity.service
         - open-fprintd-suspend.service
         - open-fprintd-resume.service # patched version in /etc
+
+
+  - from-file: common/base-after.yml

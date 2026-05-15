@@ -5,11 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '11k'
-
-  - type: script
-    scripts:
-      - better-build-id.sh
+      BUILD_ID: '11l'
 
   - type: files
     files:
@@ -181,7 +177,10 @@ modules:
     snippets:
       - "sudo plymouth-set-default-theme better-bgrt-mac-style" # apply the custom plymouth theme loaded into /usr/share/plymouth/themes earlier
       - "echo 'ShowBuild=true' | sudo tee -a /etc/xdg/kcm-about-distrorc" # show the build ID in KDE info centre - it's useful to see both the upstream image and personal build versions
-      
+    
+    scripts:
+      - better-build-id.sh
+
   - type: systemd
     system:
       enabled:
