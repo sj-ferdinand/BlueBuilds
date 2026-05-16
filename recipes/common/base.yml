@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '11n'
+      BUILD_ID: '11o'
 
   - type: files
     files:
@@ -31,8 +31,6 @@ modules:
         - monitor-edid
         - setroubleshoot
         - yt-dlp
-        - cronie
-        - cronie-anacron
         
       # kde additions
         - klassy # this requires the paul4us repo
