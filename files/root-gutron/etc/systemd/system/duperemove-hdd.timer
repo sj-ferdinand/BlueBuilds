@@ -1,0 +1,9 @@
+[Unit]
+Description=Run duperemove on /mnt/hdd
+
+[Timer]
+OnCalendar=14:50
+AccuracySec=1h
+
+[Install]
+WantedBy=timers.target

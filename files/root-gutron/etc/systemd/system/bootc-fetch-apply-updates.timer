@@ -1,0 +1,13 @@
+# Service patched for a headless server to apply updates at night instead of just queue them up for next reboot periodically
+
+[Unit]
+Description=Apply bootc updates
+Documentation=man:bootc(8)
+ConditionPathExists=/run/ostree-booted
+
+[Timer]
+OnCalendar=03:30
+AccuracySec=1h
+
+[Install]
+WantedBy=timers.target

@@ -31,17 +31,18 @@ modules:
 
   - type: files
     files:
-      - source: gutron-root
+      - source: root-gutron
         destination: /
 
   - type: script
     snippets:
-      - "ls /usr/lib/firmware/edid"
       - "sudo chown root:root /usr/lib/firmware/edid/e241i-edid.bin"
+      - "sudo ln -sfn /dev/null /etc/motd.d/cockpit"
 
   - type: systemd
     system:
       enabled:
+      # installed software
         - sshd.service
         - docker.service
         - cockpit.socket

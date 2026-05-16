@@ -32,7 +32,7 @@ modules:
 
   - type: files
     files:
-      - source: thinkpad-root # patch open-fprintd-resume
+      - source: root-thinkpad # patch open-fprintd-resume
         destination: /
 
   - type: systemd

@@ -1,0 +1,10 @@
+[Unit]
+Description=Run duperemove on /mnt/hdd
+ConditionPathExists=/mnt/hdd/Backups
+
+[Service]
+Type=oneshot
+ExecStart=duperemove --hashfile=/mnt/.hashfile-hdd /mnt/hdd -dhrv --cpu-threads=1 --io-threads=1
+IOSchedulingClass=idle
+CPUSchedulingPolicy=idle
+

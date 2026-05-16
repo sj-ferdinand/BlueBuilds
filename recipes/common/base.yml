@@ -5,11 +5,11 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: '11m'
+      BUILD_ID: '11n'
 
   - type: files
     files:
-      - source: base-root
+      - source: root-base
         destination: /
 
   - type: dnf

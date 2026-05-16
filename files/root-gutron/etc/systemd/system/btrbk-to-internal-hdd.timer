@@ -1,0 +1,9 @@
+[Unit]
+Description=Run btrbk to back up /home and /srv to the internal HDD
+
+[Timer]
+OnCalendar=23:30
+AccuracySec=1h
+
+[Install]
+WantedBy=timers.target

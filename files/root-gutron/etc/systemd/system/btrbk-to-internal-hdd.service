@@ -1,0 +1,8 @@
+[Unit]
+Description=Run btrbk to back up /home and /srv to the internal HDD
+
+[Service]
+Type=oneshot
+ExecStart=btrbk run -c /etc/btrbk/btrbk-gutron-home-to-internal-hdd.conf --progress
+IOSchedulingClass=idle
+CPUSchedulingPolicy=idle
