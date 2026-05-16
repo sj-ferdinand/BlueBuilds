@@ -4,8 +4,7 @@ ConditionPathExists=/mnt/hdd
 After=var-mnt-hdd.mount
 
 [Service]
-ExecStart=fatrace -ctue
-RootDirectory=/mnt/hdd
+ExecStart=cd /mnt/hdd && fatrace -ctue
 
 [Install]
 WantedBy=multi-user.target
