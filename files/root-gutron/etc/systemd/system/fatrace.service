@@ -5,7 +5,7 @@ After=var-mnt-hdd.mount
 
 [Service]
 WorkingDirectory=/mnt/hdd
-ExecStart=fatrace -ctue
+ExecStart=fatrace -ctu
 
 [Install]
 WantedBy=multi-user.target
