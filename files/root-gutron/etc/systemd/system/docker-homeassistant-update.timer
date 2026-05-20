@@ -1,0 +1,9 @@
+[Unit]
+Description=Periodically update HomeAssistant docker container
+
+[Timer]
+OnCalendar=02:30
+AccuracySec=1h
+
+[Install]
+WantedBy=timers.target

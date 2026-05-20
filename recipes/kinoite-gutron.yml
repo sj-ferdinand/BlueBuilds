@@ -43,6 +43,7 @@ modules:
     system:
       enabled:
       # installed software
+        - smb.service
         - sshd.service
         - docker.service
         - cockpit.socket
@@ -52,5 +53,3 @@ modules:
     kargs:
       - drm.edid_firmware:edid/e241i-edid.bin
       - video=HDMI-A-1:1920x1080@60e
-
-  - from-file: common/base-after.yml

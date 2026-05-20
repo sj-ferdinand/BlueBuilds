@@ -14,5 +14,3 @@ modules:
   - type: os-release
     properties:
       DEFAULT_HOSTNAME: kinoite-testbed
-
-  - from-file: common/base-after.yml
