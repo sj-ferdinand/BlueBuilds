@@ -49,6 +49,8 @@ modules:
         - docker.service
         - cockpit.socket
         - glances.service
+        - pmlogger.service
+        - pmproxy.service
 
   - type: kargs
     kargs:

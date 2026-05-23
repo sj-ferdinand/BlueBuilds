@@ -5,7 +5,6 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      #BUILD_ID: '11s'
 
   - type: files
     files:
