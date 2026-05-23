@@ -19,6 +19,7 @@ modules:
   - type: dnf
     install:
       packages:
+        - pcp
         - glances
         - python3-jinja2
       
