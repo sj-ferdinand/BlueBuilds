@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: 11u
+      BUILD_ID: 11v
 
   - type: files
     files:
@@ -20,6 +20,7 @@ modules:
         - https://download.opensuse.org/download/repositories/home:/paulmcauley/Fedora_%OS_VERSION%/home:paulmcauley.repo # for klassy
 
     install:
+      allow-erasing: true
       packages:
         - perf
         # - gcc
