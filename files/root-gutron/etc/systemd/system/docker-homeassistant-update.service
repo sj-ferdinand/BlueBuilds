@@ -3,6 +3,6 @@ Description=Periodically update HomeAssistant docker container
 
 [Service]
 Type=oneshot
-WorkingDirectory=/mnt/hdd
+WorkingDirectory=/srv/containers/homeassistant
 ExecStart=docker compose pull
 ExecStart=docker compose up -d --remove-orphans
