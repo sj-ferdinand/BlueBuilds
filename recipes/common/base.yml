@@ -143,7 +143,6 @@ modules:
         install:
         # themes
           - org.gtk.Gtk3theme.Breeze
-          #- org.gtk.Gtk3theme.Breeze-Dark
 
         # utils
           - io.github.jonmagon.kdiskmark
