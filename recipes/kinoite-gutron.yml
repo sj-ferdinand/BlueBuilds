@@ -30,6 +30,9 @@ modules:
       # NAS
         - samba
 
+      # email
+        - imapfilter
+
   - type: files
     files:
       - source: root-gutron
