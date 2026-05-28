@@ -56,7 +56,7 @@ modules:
           - com.vscodium.codium
 
         # office
-          - org.mozilla.Thunderbird
+          - org.mozilla.thunderbird
 
         # media
           - org.kde.dragonplayer
