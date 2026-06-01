@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: 11x
+      BUILD_ID: 11y
 
   - type: files
     files:
@@ -70,6 +70,7 @@ modules:
         - cockpit-ostree
         - cockpit-files
         - cockpit-storaged
+        - pcp
 
       # codecs
         - gstreamer1-plugin-dav1d
@@ -180,6 +181,9 @@ modules:
     system:
       enabled:
         - tailscaled.service
+        - cockpit.socket
+        - pmlogger.service
+        - pmproxy.service
 
   - type: initramfs
 

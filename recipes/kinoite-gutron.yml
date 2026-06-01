@@ -19,7 +19,7 @@ modules:
   - type: dnf
     install:
       packages:
-        - pcp
+        
         - glances
         - python3-jinja2
       
@@ -50,10 +50,8 @@ modules:
         - smb.service
         - sshd.service
         - docker.service
-        - cockpit.socket
         - glances.service
-        - pmlogger.service
-        - pmproxy.service
+        
 
   - type: kargs
     kargs:
