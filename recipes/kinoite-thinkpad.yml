@@ -30,6 +30,8 @@ modules:
         - fprintd-clients-pam
         - open-fprintd
 
+        - pipewire-config-raop
+
   - type: files
     files:
       - source: root-thinkpad # patch open-fprintd-resume
