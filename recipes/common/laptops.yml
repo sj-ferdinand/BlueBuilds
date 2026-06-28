@@ -11,6 +11,9 @@ modules:
 
         - steam # the flatpak struggles with some stuff like big picture
 
+        - kmscon # testing
+        - kmscon-pango
+
   - type: default-flatpaks
     configurations:
       - notify: true
@@ -85,5 +88,7 @@ modules:
     scripts:
       - laptops-install-printer-driver-rpm.sh 
         # epson provide driver RPMs but messed up the hashing? technically dodgy asf but does work so i won't mess with it
+    snippets:
+      - " sudo ln -s /usr/lib/systemd/system/kmsconvt@.service /etc/systemd/system/autovt@.service"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
