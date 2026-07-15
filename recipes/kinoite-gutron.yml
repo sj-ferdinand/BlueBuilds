@@ -54,7 +54,7 @@ modules:
         - glances.service
         
 
-  - type: kargs
-    kargs:
-      - drm.edid_firmware:edid/e241i-edid.bin
-      - video=HDMI-A-1:1920x1080@60e
+  #- type: kargs
+  #  kargs:
+  #    - drm.edid_firmware:edid/e241i-edid.bin
+  #    - video=HDMI-A-1:1920x1080@60e
