@@ -6,7 +6,7 @@ Documentation=man:bootc(8)
 ConditionPathExists=/run/ostree-booted
 
 [Timer]
-OnCalendar=03:30
+OnCalendar=07:30
 AccuracySec=1h
 
 [Install]
