@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: 12e
+      BUILD_ID: 12f
 
   - type: files
     files:
@@ -184,6 +184,8 @@ modules:
         - cockpit.socket
         - pmlogger.service
         - pmproxy.service
+
+        - flatpak-system-updates.timer
 
   - type: initramfs
 
