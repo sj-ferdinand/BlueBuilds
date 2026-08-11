@@ -27,7 +27,7 @@ modules:
         - docker
         - docker-compose
         - runc
-        - iptables-nft
+        - iptables-legacy
 
       # NAS
         - samba
