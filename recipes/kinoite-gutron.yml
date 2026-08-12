@@ -20,6 +20,7 @@ modules:
     install:
       packages:
         
+        - cockpit-pcp
         - glances
         - python3-jinja2
       
