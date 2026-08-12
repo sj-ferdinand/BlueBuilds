@@ -23,7 +23,6 @@ modules:
       # remote admin  
         - pcp
         - python3-pcp
-        - cockpit-pcp
 
         - glances
         - python3-jinja2
