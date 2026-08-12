@@ -3,8 +3,14 @@
 
 modules:
   - type: dnf
+    repos:
+      copr:
+        - ama1470/kwin-effects-glass
+
     install:
       packages:
+        - kwin-effects-glass
+
         - gutenprint-cups
         - wine # getting wine flatpak to work well is a pain icl
         - winetricks
