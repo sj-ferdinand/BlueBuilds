@@ -1,0 +1,9 @@
+[Unit]
+Description=Run rsync to back up /etc to the internal HDD
+
+[Timer]
+OnCalendar=23:00
+AccuracySec=1h
+
+[Install]
+WantedBy=timers.target

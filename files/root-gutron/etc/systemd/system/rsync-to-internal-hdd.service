@@ -1,0 +1,8 @@
+[Unit]
+Description=Run rsync to back up /etc to the internal HDD
+
+[Service]
+Type=oneshot
+ExecStart=rsync -avPrhb /etc/ /mnt/hdd/Backups/Internal/etc
+IOSchedulingClass=idle
+CPUSchedulingPolicy=idle

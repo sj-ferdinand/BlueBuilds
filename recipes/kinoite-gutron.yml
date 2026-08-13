@@ -20,10 +20,7 @@ modules:
     install:
       packages:
 
-      # remote admin  
-        - pcp
-        - python3-pcp
-
+      # remote admin
         - glances
         - python3-jinja2
       
