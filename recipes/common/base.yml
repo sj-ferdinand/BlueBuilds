@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: 12i
+      BUILD_ID: 12j
 
   - type: files
     files:
@@ -23,11 +23,11 @@ modules:
       allow-erasing: true
       packages:
         - perf
-        # - gcc
         - python
         - python-launcher
         - python3-pip
         - fish
+        - nushell
         - git
         - monitor-edid
         - setroubleshoot
@@ -43,7 +43,6 @@ modules:
         - syncthing
         - syncthingctl-qt6 # these require the mkittler repo
         - syncthingfileitemaction-qt6
-        #- syncthingtray-qt6
         - syncthingplasmoid-qt6
 
       # filesystem and backup
@@ -96,12 +95,6 @@ modules:
         - lame
         - lame-libs
         - openh264
-
-      # build packagekit-bootc
-      #   - PackageKit-devel
-      #   - meson
-      #   - ninja-build
-      #   - glib2-devel
 
     replace:
       - from-repo: rpmfusion-free
