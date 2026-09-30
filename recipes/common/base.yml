@@ -18,7 +18,7 @@ modules:
       files:
         - https://download.opensuse.org/download/repositories/home:/mkittler/Fedora_%OS_VERSION%/home:mkittler.repo # for syncthingtray
         - https://download.opensuse.org/download/repositories/home:/paulmcauley/Fedora_%OS_VERSION%/home:paulmcauley.repo # for klassy
-        - https://terra.fyralabs.com/ # for lan-mouse and packagekit-bootc
+        - https://raw.githubusercontent.com/terrapkg/subatomic-repos/main/terra.repo # for lan-mouse and packagekit-bootc
 
     install:
       allow-erasing: true
