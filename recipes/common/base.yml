@@ -33,7 +33,7 @@ modules:
         - monitor-edid
         - setroubleshoot
         - yt-dlp
-        - packagekit-bootc # requires terra
+        - PackageKit-bootc # requires terra
         
       # kde additions
         - klassy # this requires the paulmcauley repo
