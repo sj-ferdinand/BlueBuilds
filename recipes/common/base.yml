@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: 12j
+      BUILD_ID: 12k
 
   - type: files
     files:
@@ -18,6 +18,7 @@ modules:
       files:
         - https://download.opensuse.org/download/repositories/home:/mkittler/Fedora_%OS_VERSION%/home:mkittler.repo # for syncthingtray
         - https://download.opensuse.org/download/repositories/home:/paulmcauley/Fedora_%OS_VERSION%/home:paulmcauley.repo # for klassy
+        - https://terra.fyralabs.com/ # for lan-mouse and packagekit-bootc
 
     install:
       allow-erasing: true
@@ -32,6 +33,7 @@ modules:
         - monitor-edid
         - setroubleshoot
         - yt-dlp
+        - packagekit-bootc # requires terra
         
       # kde additions
         - klassy # this requires the paulmcauley repo
@@ -71,6 +73,7 @@ modules:
         - cockpit-storaged
         - pcp
         - python3-pcp
+        - lan-mouse # requires terra
 
       # codecs
         - gstreamer1-plugin-dav1d
