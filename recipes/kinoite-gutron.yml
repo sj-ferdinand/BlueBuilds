@@ -36,6 +36,10 @@ modules:
       # email
         - imapfilter
 
+      # calendar
+        - radicale3
+        - radicale3-InfCloud
+
   - type: files
     files:
       - source: root-gutron
