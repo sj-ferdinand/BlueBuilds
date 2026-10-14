@@ -40,6 +40,8 @@ modules:
         - radicale3
         - radicale3-InfCloud
 
+        - httpd-tools
+
   - type: files
     files:
       - source: root-gutron
