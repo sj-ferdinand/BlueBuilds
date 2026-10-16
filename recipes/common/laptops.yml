@@ -12,7 +12,7 @@ modules:
         #- kwin-effects-glass
         - kdepim-addons
         - kdepim-runtime
-        - korganizer
+        - merkuro
 
         - gutenprint-cups
         - wine # getting wine flatpak to work well is a pain icl
@@ -69,7 +69,6 @@ modules:
 
         # office
           - org.mozilla.thunderbird
-          - org.kde.merkuro
 
         # media
           - org.kde.dragonplayer
