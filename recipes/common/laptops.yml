@@ -12,7 +12,7 @@ modules:
         #- kwin-effects-glass
         - kdepim-addons
         - kdepim-runtime
-        - korganiser
+        #- korganiser
 
         - gutenprint-cups
         - wine # getting wine flatpak to work well is a pain icl
