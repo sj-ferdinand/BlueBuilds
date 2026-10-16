@@ -69,6 +69,7 @@ modules:
 
         # office
           - org.mozilla.thunderbird
+          - org.kde.merkuro
 
         # media
           - org.kde.dragonplayer
