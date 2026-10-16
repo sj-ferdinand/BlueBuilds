@@ -10,6 +10,9 @@ modules:
     install:
       packages:
         #- kwin-effects-glass
+        - kdepim-addons
+        - kdepim-runtime
+        - korganiser
 
         - gutenprint-cups
         - wine # getting wine flatpak to work well is a pain icl
