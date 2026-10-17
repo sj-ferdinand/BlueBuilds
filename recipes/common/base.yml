@@ -5,7 +5,7 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: Fedora Kinoite (BlueBuild)
-      BUILD_ID: 12p
+      BUILD_ID: 12q
 
   - type: files
     files:
@@ -34,7 +34,8 @@ modules:
         - setroubleshoot
         - yt-dlp
         - PackageKit-bootc # requires terra
-        
+        - qt6-qtwebsockets-devel
+
       # kde additions
         - klassy # this requires the paulmcauley repo
         - kcron
