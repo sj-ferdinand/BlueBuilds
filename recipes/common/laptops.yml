@@ -13,6 +13,7 @@ modules:
         - kdepim-addons
         - kdepim-runtime
         - merkuro
+        - korganizer
 
         - gutenprint-cups
         - wine # getting wine flatpak to work well is a pain icl
