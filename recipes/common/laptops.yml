@@ -12,7 +12,6 @@ modules:
         #- kwin-effects-glass
         - kdepim-addons
         - kdepim-runtime
-        - merkuro
         - korganizer
 
         - gutenprint-cups
