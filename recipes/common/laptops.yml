@@ -3,13 +3,13 @@
 
 modules:
   - type: dnf
-    #repos:
-      #copr:
-        #- ama1470/kwin-effects-glass
+    repos:
+      copr:
+        - ama1470/kwin-effects-glass
 
     install:
       packages:
-        #- kwin-effects-glass
+        - kwin-effects-glass
         - kdepim-addons
         - kdepim-runtime
         - korganizer
