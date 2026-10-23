@@ -52,6 +52,7 @@ modules:
           - com.github.cassidyjames.dippi
           - com.oppzippy.OpenSCQ30
           - app.comaps.comaps
+          - com.calibre_ebook.calibre
 
         # kde utils
           - org.kde.kcolorchooser
@@ -62,6 +63,7 @@ modules:
           - org.kde.krdc
           - org.kde.okteta
           - org.kde.kompare
+          - org.kde.koko
 
         # printing
           - net.epson.epsonscan2
