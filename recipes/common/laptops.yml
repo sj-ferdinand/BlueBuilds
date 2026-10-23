@@ -3,15 +3,15 @@
 
 modules:
   - type: dnf
-    repos:
-      copr:
-        - ama1470/kwin-effects-glass
-        - infinality/kwin-effects-better-blur-dx
+    #repos:
+      #copr:
+        #- ama1470/kwin-effects-glass
+        #- infinality/kwin-effects-better-blur-dx
 
     install:
       packages:
-        - kwin-effects-glass
-        - kwin-effects-better-blur-dx
+        #- kwin-effects-glass
+        #- kwin-effects-better-blur-dx
         
         - kdepim-addons
         - kdepim-runtime
