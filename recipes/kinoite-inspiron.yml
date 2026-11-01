@@ -6,7 +6,7 @@ description: Custom Fedora Kinoite image with personal tweaks - configured for h
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/blue-build/base-images/fedora-kinoite
-image-version: latest
+image-version: 44
 
 modules:
   - from-file: common/base.yml
