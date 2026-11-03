@@ -4,15 +4,11 @@
 # from https://github.com/blue-build/base-images
 modules:
   - type: signing
-  - type: justfiles
-    validate: true
-    install: true
-    include:
-      - 30-secureboot.just
-  - type: files
-    files:
-      - source: base
-        destination: /
+  #- type: justfiles
+  #  validate: true
+  #  install: true
+  #  include:
+  #    - 30-secureboot.just
   - type: systemd
     system:
       masked:
