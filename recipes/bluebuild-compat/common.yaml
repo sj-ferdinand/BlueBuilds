@@ -3,23 +3,6 @@
 
 # from https://github.com/blue-build/base-images
 modules:
-  - type: signing
-  #- type: justfiles
-  #  validate: true
-  #  install: true
-  #  include:
-  #    - 30-secureboot.just
-  - type: systemd
-    system:
-      masked:
-        - rpm-ostreed-automatic.timer
-      enabled:
-        - bootc-fetch-apply-updates.timer
-        - flatpak-system-updates.timer
-    user:
-      enabled:
-        - flatpak-user-updates.timer
-
   # Install ublue and QOL stuff
   - type: dnf
     repos:

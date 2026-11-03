@@ -185,7 +185,11 @@ modules:
         - pmlogger.service
         - pmproxy.service
 
+        - bootc-fetch-apply-updates.timer
         - flatpak-system-updates.timer
+        
+      masked:
+        - rpm-ostreed-automatic.timer
 
   - type: initramfs
 
