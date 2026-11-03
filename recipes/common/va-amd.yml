@@ -3,8 +3,6 @@
 
 modules:
   - type: dnf
-    repos:
-      nonfree: rpmfusion
     install:
       packages:
       # AMD hardware acceleration drivers
