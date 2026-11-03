@@ -23,9 +23,6 @@ modules:
 
         - steam # the flatpak struggles with some stuff like big picture
 
-        - kmscon # testing
-        - kmscon-pango
-
   - type: default-flatpaks
     configurations:
       - notify: true

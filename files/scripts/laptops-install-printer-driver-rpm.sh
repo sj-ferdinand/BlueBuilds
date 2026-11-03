@@ -6,5 +6,5 @@
 set -oue pipefail
 
 # Your code goes here.
-sudo rpm -i --nodigest ./resources/epson/*
+sudo rpm -i --nodigest --nosignature ./resources/epson/*
 
