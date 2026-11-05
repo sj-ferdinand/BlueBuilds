@@ -21,19 +21,25 @@ modules:
       DEFAULT_HOSTNAME: x1carbon
 
   - type: dnf
+    install:
+      packages:
+        - pipewire-config-raop
+
+  # python-validity and its copr have gone unmaintained and rely on an old python abi that's no longer supported by f45
+  # it will stay here for now in case it gets picked up and fixed again, then it'll automatically be reincluded
+  # if it stays broken by f46 i'll probably remove it altogether :/
+  - type: dnf
     repos:
       copr:
         - sneexy/python-validity # for open-fprintd and validity fingerprint reader support
-
     install:
       allow-erasing: true
+      skip-broken: true
       packages:
       # fingerprint reader drivers, these require copr:sneexy/python-validity
         - python3-validity
         - fprintd-clients-pam
         - open-fprintd
-
-        - pipewire-config-raop
 
   - type: files
     files:
